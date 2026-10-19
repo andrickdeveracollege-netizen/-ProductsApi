@@ -53,6 +53,7 @@ public class GlobalExceptionHandler : IExceptionHandler
             httpContext.TraceIdentifier;
 
         httpContext.Response.StatusCode = statusCode;
+        httpContext.Response.ContentType = "application/problem+json";
 
         await httpContext.Response.WriteAsJsonAsync(
             problem,
