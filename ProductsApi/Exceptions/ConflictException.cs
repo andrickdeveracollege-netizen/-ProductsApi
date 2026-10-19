@@ -1,6 +1,9 @@
-﻿namespace ProductsApi.Exceptions
+﻿namespace ProductsApi.Exceptions;
+
+public class ConflictException : Exception
 {
-    public class ConflictException
+    public ConflictException(string message)
+        : base(message)
     {
     }
 }
